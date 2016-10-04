@@ -20,7 +20,6 @@ void DHT_task(void *pvParameter)
     printf("F temperature is %d\n", getFtemp());
     printf("Humidity reading %d\n",getHumidity());
     vTaskDelay(3000 / portTICK_RATE_MS);
-    //sendStart(4);
    }
 }
 
