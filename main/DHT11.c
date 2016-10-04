@@ -1,8 +1,8 @@
 /* DHT11 temperature sensor library
 
-   Usage is straight forward:
-   		Ser DHT PIN using  setDHTPin(pin) command
-   		then use any of the getter functions to get temp/humidity data
+   Usage:
+   		Set DHT PIN using  setDHTPin(pin) command
+   		getFtemp(); this returns temperature in F
 
    Sam Johnston 
    October 2016
