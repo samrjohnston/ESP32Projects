@@ -25,9 +25,12 @@
 void setDHTPin(int PIN);
 //Do not need to touch these three
 void sendStart();
-int getData();
 void errorHandle(int response);
+
+//To get all 3 measurements in an array use
+int getData();
 //call each function for live temperature updates
+//if you only need one measurements use these functions
 int getFtemp();
 int getTemp();
 int getHumidity();

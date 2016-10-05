@@ -27,6 +27,8 @@
 int humidity = 0;
 int temperature = 0;
 int Ftemperature = 0;
+
+int DHT_DATA[3] = [0,0,0]
 int DHT_PIN = 4;
 
 void setDHTPin(int PIN)
@@ -173,22 +175,28 @@ int getData()
   {
   	return DHT_CHECKSUM_ERROR;
   }
-  return DHT_OKAY;
+  DHT_DATA = [temperature,Ftemperature, humidity];
+  return DHT_DATA;
 }
 
 int getFtemp()
 {
-	
-	getData();
-	return Ftemperature;	
+	int ftemp = 0;
+	int Data = getData();
+	ftemp = Data[1];
+	return ftemp;	
 }
 int getTemp()
 {
-	getData();
-	return temperature;
+	int temp = 0;
+	int Data = getData();
+	temp = Data[0];
+	return temp;
 }
 int getHumidity()
 {
-	getData();
-	return humidity;
+	int humid = 0;
+	int Data = getData();
+	humid = Data[2];
+	return humid;
 }
